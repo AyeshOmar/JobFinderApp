@@ -12,7 +12,7 @@ function App() {
 
       <Routes>
             <Route exact  path="/" element={<Home />} />
-            <Route  path="/all-jobs" element={<AllJobGrid />} />      
+            <Route  path="/JobFinderApp/all-jobs" element={<AllJobGrid />} />      
       </Routes>
       </div>
   )
