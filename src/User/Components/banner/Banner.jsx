@@ -5,7 +5,7 @@ import { FiMapPin, FiSearch } from "react-icons/fi";
 
 const Banner = () => {
   return (
-    <div className=" bg-blue-50 bg-[url('./images/background.png')] bg-cover bg-no-repeat bg-center flex items-center justify-center px-6 md:px-8 py-5 mt-25 overflow-hidden">
+    <div className=" bg-blue-50 bg-[url('./images/background.png')] bg-cover bg-no-repeat bg-center flex items-center justify-center px-6 md:px-8 py-5 mt-19 overflow-hidden">
       
       {/* Grid layout for left and right sections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-1 w-full max-w-7xl items-center">

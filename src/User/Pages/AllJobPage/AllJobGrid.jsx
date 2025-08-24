@@ -152,9 +152,9 @@ const jobData = [
 ];
 
 // Découpage des jobs pour la page actuelle
-  const indexOfLastJob = currentPage * jobsPerPage;
-  const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  const currentJobs = jobData.slice(indexOfFirstJob, indexOfLastJob);
+  const indexOfLastJob = currentPage * jobsPerPage; //1*2 =2
+  const indexOfFirstJob = indexOfLastJob - jobsPerPage; //2 - 2 = 0
+  const currentJobs = jobData.slice(indexOfFirstJob, indexOfLastJob);//2
 
   const totalPages = Math.ceil(jobData.length / jobsPerPage);
 
@@ -172,7 +172,7 @@ const jobData = [
       {/* Header */}
       <Header />
 
-      <div className="mt-25 grid grid-cols-1 md:grid-cols-10">
+      <div className="mt-17 grid grid-cols-1 md:grid-cols-10">
         {/* Left Side - Job Filters */}
         <div className="md:col-span-7 lg:col-span-5 p-8">
           {/* Title */}
@@ -182,7 +182,7 @@ const jobData = [
           </div>
 
           {/* Form Grid */}
-          <div className="grid lg:grid-cols-9 gap-5 mt-6">
+          <div className="grid lg:grid-cols-9 gap-5 mt-5">
             {/* Job Title */}
             <div className="lg:col-span-3">
               <p className="text-[#3c3c3c] mb-2">Job Title</p>

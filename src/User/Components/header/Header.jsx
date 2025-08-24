@@ -1,39 +1,39 @@
 import React, { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import { FiUser, FiMenu, FiX } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <nav className="bg-white w-full shadow-md z-50 fixed top-0 left-0 right-0">
-      <div className="flex justify-between items-center px-6 py-4">
+      <div className="flex justify-between items-center px-6 py-2">
         {/* Logo */}
-        <img src="./images/logo.png" alt="Logo Site" className="w-40 h-18" />
+        <img src="./images/logo.jpg" alt="Logo Site" className=" h-16" />
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-4 font-medium">
-          <a href="/" className="text-[20px] text-gray-800 capitalize px-4 py-1 hover:bg-blue-800 hover:text-white rounded">
+          <Link to="/" className="text-[20px] text-gray-800 capitalize px-4 py-1 hover:bg-[#E0EEFF]  rounded">
             Home
-          </a>
-          <a href="/all-jobs" className="text-[20px] text-gray-800 px-4 py-1 hover:bg-blue-800 hover:text-white rounded">
+          </Link>
+          <Link to="/all-jobs" className="text-[20px] text-gray-800 px-4 py-1 hover:bg-[#E0EEFF]  rounded">
             Find Offer
-          </a>
-          <a href="#" className="text-[20px] text-gray-800 px-4 py-1 hover:bg-blue-800 hover:text-white rounded">
+          </Link>
+          <Link to="#" className="text-[20px] text-gray-800 px-4 py-1 hover:bg-[#E0EEFF]  rounded">
             About Us
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Dropdown */}
         <div className="relative hidden md:block">
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="w-auto text-lg hover:bg-blue-500 hover:text-white bg-[#2e55fa] flex items-center border px-6 py-3 rounded"
-          >
-            <FiUser className="mr-2 text-[25px] text-white" />
-            <p className="text-white">Se Connecter</p>
-            <AiOutlineDown className="ml-3 text-2xl text-white" />
+            className="w-auto text-lg  bg-[#E0EEFF] flex items-center  px-4 py-2 rounded-[10px] cursor-pointer">
+          
+            <FiUser className="mr-2 text-[25px] text-[#1967D2]" />
+            <p className="text-[#1967D2]">Se Connecter</p>
+            <AiOutlineDown className="ml-3 text-2xl text-[#1967D2]" />
           </button>
 
           {dropdownOpen && (
@@ -66,13 +66,13 @@ const Header = () => {
           </button>
         </div>
         <div className="flex flex-col px-6 py-4 space-y-4 text-lg font-medium">
-          <a href="#" className="text-gray-800 hover:text-blue-600">Home</a>
-          <a href="#" className="text-gray-800 hover:text-blue-600">Find Offer</a>
-          <a href="#" className="text-gray-800 hover:text-blue-600">About Us</a>
+          <Link to="/" className="text-gray-800 hover:text-blue-600">Home</Link>
+          <Link to="/all-jobs" className="text-gray-800 hover:text-blue-600">Find Offer</Link>
+          <Link to="#" className="text-gray-800 hover:text-blue-600">About Us</Link>
           <hr />
-          <a href="#" className="text-gray-800 hover:text-blue-600">Se Connecter</a>
-          <a href="#" className="text-gray-800 hover:text-blue-600">Votre compte</a>
-          <a href="#" className="text-gray-800 hover:text-blue-600">Suivre candidature</a>
+          <Link to="#" className="text-gray-800 hover:text-blue-600">Se Connecter</Link>
+          <Link to="#" className="text-gray-800 hover:text-blue-600">Votre compte</Link>
+          <Link to="#" className="text-gray-800 hover:text-blue-600">Suivre candidature</Link>
         </div>
       </div>
 

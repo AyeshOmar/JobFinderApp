@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-4 gap-6 w-full bg-[#2E55FA0D] p-15 pt-20">
           
           {/* First Div (Logo + Text) */}
-          <div className="md:col-span-7 lg:col-span-1">
-            <img src="./images/logo.png" alt="Logo Site" className="w-auto h-20" />
+          <div className="md:col-span-7 lg:col-span-1 ">
+            <img src="./images/logo.jpg" alt="Logo Site" className="w-auto h-20 mb-5" />
             <p>
               The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
             </p>
