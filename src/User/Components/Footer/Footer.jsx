@@ -19,42 +19,45 @@ const Footer = () => {
             </div>
       </div>
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-4 gap-6 w-full bg-[#2E55FA0D] p-15 pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-4 gap-6 w-full bg-[#17171D] p-15 pt-20">
           
           {/* First Div (Logo + Text) */}
           <div className="md:col-span-7 lg:col-span-1 ">
-            <img src="./images/logo.jpg" alt="Logo Site" className="w-auto h-20 mb-5" />
-            <p>
+            <img src="./images/logo.jpg" alt="Logo Site" className="w-auto h-20 mb-5 rounded-2xl" />
+            <p className='text-[#FFFFFF]'>
               The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
             </p>
           </div>
 
           {/* Second Div (Useful Links) */}
           <div className="md:col-span-3 lg:col-span-1">
-            <h5 className="font-bold text-2xl text-[#142238]">Useful Links</h5>
-            <ul>
+            <h5 className="font-bold text-2xl text-[#2E55FA] mb-1">Useful Links</h5>
+              <div className='border-b-4 border-[#2E55FA] w-40 '></div>
+            <ul className='mt-3'>
               {UsefulLinks.map((item, index) => (
-                <li key={index} className="text-[#444444] text-[20px]">{item}</li>
+                <li key={index} className="text-[#FFFFFF] text-[20px]">{item}</li>
               ))}
             </ul>
           </div>
 
           {/* Third Div (Categories) */}
           <div className="md:col-span-5 lg:col-span-1">
-            <h5 className="font-bold text-2xl text-[#142238]">Categories</h5>
-            <ul>
+            <h5 className="font-bold text-2xl text-[#2E55FA] mb-1 ">Categories</h5>
+              <div className='border-b-4 border-[#2E55FA] w-40'></div>
+            <ul className='mt-3'>
               {Categories.map((item, index) => (
-                <li key={index} className="text-[#444444] text-[20px]">{item}</li>
+                <li key={index} className="text-[#FFFFFF] text-[20px]">{item}</li>
               ))}
             </ul>
           </div>
 
           {/* Fourth Div (Social Media Links) */}
           <div className="md:col-span-5 lg:col-span-1">
-            <h5 className="font-bold text-2xl text-[#142238]">Social Media</h5>
-            <ul>
+            <h5 className="font-bold text-2xl text-[#2E55FA] mb-1 ">Social Media</h5>
+            <div className='border-b-4 border-[#2E55FA] w-40'></div>
+            <ul className='mt-3'>
               {SocialMediaLinks.map((item, index) => (
-                <li key={index} className="text-[#444444] text-[20px]">{item}</li>
+                <li key={index} className="text-[#FFFFFF] text-[20px]">{item}</li>
               ))}
             </ul>
           </div>

@@ -4,6 +4,8 @@ import { FaSuitcase, FaAddressCard, FaMapMarkerAlt, FaDollarSign } from "react-i
 import CardJob from '../../Components/JobOffer/CardJob';
 import MapLeaflet from "./MapLeaflet";
 import Pagination from '@mui/material/Pagination';
+
+
 const AllJobGrid = () => {
 
 const [sign ,setSign] = useState('');
@@ -173,13 +175,18 @@ const jobData = [
       <Header />
 
       <div className="mt-17 grid grid-cols-1 md:grid-cols-10">
-        {/* Left Side - Job Filters */}
-        <div className="md:col-span-7 lg:col-span-5 p-8">
+        
+
+       {/* Left Side - Job Filters */}
+         <div className="md:col-span-7 lg:col-span-5 p-8">
+
           {/* Title */}
           <div className="flex items-center border-b border-gray-200 pb-3">
             <FaSuitcase className="text-blue-600" />
             <h1 className="text-xl font-semibold ml-2">Find Jobs</h1>
           </div>
+
+
 
           {/* Form Grid */}
           <div className="grid lg:grid-cols-9 gap-5 mt-5">
@@ -196,6 +203,8 @@ const jobData = [
               </div>
             </div>
 
+
+
             {/* Job Category */}
             <div className="lg:col-span-3 ">
               <p className="text-[#3c3c3c] mb-2">Job Category</p>
@@ -209,6 +218,10 @@ const jobData = [
                 </select>
               </div>
             </div>
+
+
+
+
 
             {/* Job Type */}
             <div className="lg:col-span-3">
@@ -224,6 +237,11 @@ const jobData = [
               </div>
             </div>
 
+
+
+
+
+
             {/* Location */}
             <div className="lg:col-span-9">
               <p className="text-[#3c3c3c] mb-2">Location</p>
@@ -236,6 +254,10 @@ const jobData = [
                 />
               </div>
             </div>
+
+
+
+
 
             {/* Salary */}
             <div className="lg:col-span-9">
@@ -253,13 +275,22 @@ const jobData = [
 
 
 
+
+
+
             {/* Button */}
             <div className="lg:col-span-9">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition cursor-pointer">
                 Search Job
               </button>
             </div>
+
+
+
           </div>
+
+
+
 
 
           <div>
@@ -284,14 +315,21 @@ const jobData = [
 
 
 
-        {/* Right Side */}
+
+
+        
           <div className="md:col-span-3 lg:col-span-5 bg-gray-100">
             <div className="sticky top-0 h-screen">
               <MapLeaflet jobs={jobData} />
             </div>
          </div>
 
+
+
       </div>
+
+
+
     </div>
   )
 }
