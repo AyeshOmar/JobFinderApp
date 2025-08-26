@@ -171,9 +171,7 @@ const jobData = [
 
   return (
     <div>
-      {/* Header */}
-      <Header />
-
+     
       <div className="mt-17 grid grid-cols-1 md:grid-cols-10">
         
 

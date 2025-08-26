@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const CardJob = ({ Data ,sign}) => {
   
 
@@ -69,7 +69,7 @@ const CardJob = ({ Data ,sign}) => {
                 / {item.unit}
               </p>
               <a
-                href="#"
+                href="Job-Details"
                 className="text-blue-500 font-semibold hover:underline"
               >
                 Browse Job
