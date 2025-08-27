@@ -1,6 +1,12 @@
 import React from 'react'
-import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoCheckmark } from "react-icons/io5";
+import { FaRegCalendarAlt, FaEye, FaUsers } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
+import { PiGraduationCapBold } from "react-icons/pi";
+import { IoMaleFemale } from "react-icons/io5";
+import { FaDollarSign } from "react-icons/fa";
+import Map from '../MapLeaf/Map';
 const JobDetail = () => {
 
 
@@ -11,7 +17,17 @@ const SocialMedia=[
     {name:"Whatsapp",  className:'bg-[#2CA53B] text-white rounded-[10px] px-5 py-1'},
    
 ]
-
+const photos = [
+    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
+    "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg",
+    "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+    "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+    "https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg",
+    "https://images.pexels.com/photos/3184395/pexels-photo-3184395.jpeg",
+    "https://images.pexels.com/photos/3184656/pexels-photo-3184656.jpeg",
+    "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg",
+  ];
 
   return (
     <div className='mt-22 grid grid-cols-1 md:grid-cols-[70%_30%] gap-4 mx-auto max-w-[1170px] p-8 '>
@@ -116,15 +132,34 @@ const SocialMedia=[
                        
                      </div>
                 </div>
+
+
                 <div className='mt-5'>
                     <h1 className='font-bold text-[#17171D] text-[21px] '>Location </h1>
                      <div className='flex space-x-3 mt-5'>
-                     
-                       
-                       
-                       
+                       <Map/>
                      </div>
                 </div>
+
+                <div className="flex flex-col md:flex-row gap-10 mt-8">
+                    {/* Office Photos */}
+                    <div className="flex-1">
+                        <h2 className="font-semibold text-lg mb-4">Office Photos</h2>
+                        <div className="grid grid-cols-3 gap-3">
+                        {photos.map((src, i) => (
+                            <img
+                            key={i}
+                            src={src}
+                            alt={`office-${i}`}
+                            className="w-full h-24 object-cover rounded-lg cursor-pointer hover:border-[#2e55fa] hover:shadow-[0_0px_15px_rgba(56,152,226,0.4)]  transition duration-300"
+                            />
+                        ))}
+                        </div>
+                    </div>
+
+                    </div>
+
+
 
 
 
@@ -145,10 +180,137 @@ const SocialMedia=[
 
 
 
-         {/*Right section*/}
-        <div className=''>
-            frevfve
-        </div>
+                {/*Right section*/}
+                <div className="bg-white rounded-xl p-6">
+                    <h2 className="font-bold text-lg mb-5">Job Information</h2>
+
+                    {/* Stats Boxes */}
+                    <div className="space-y-3">
+                        <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                            <div className="flex items-center gap-2 text-gray-700">
+                                <FaRegCalendarAlt className="text-blue-500" />
+                                <span>Date Posted</span>
+                            </div>
+                            <span className="font-medium">April 22, 2023</span>
+                        </div>
+
+                        <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                            <div className="flex items-center gap-2 text-gray-700">
+                                <FaEye className="text-blue-500" />
+                                <span>Views</span>
+                            </div>
+                            <span className="font-medium">8160</span>
+                        </div>
+
+                        <div className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                            <div className="flex items-center gap-2 text-gray-700">
+                                <FaUsers className="text-blue-500" />
+                                <span>Applicants</span>
+                            </div>
+                            <span className="font-medium">6</span>
+                        </div>
+                    </div>
+
+                    {/* Job Details */}
+                    <div className="mt-15 space-y-5 text-[17px] text-gray-700">
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <FaRegCalendarAlt className="text-blue-500" /> Date Posted
+                            </p>
+                            <p>April 22, 2023</p>
+                        </div>
+
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <FaMapMarkerAlt className="text-blue-500" /> Location
+                            </p>
+                            <p>Munchen, Germany</p>
+                        </div>
+
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <MdWork className="text-blue-500" /> Job Title
+                            </p>
+                            <p>Web Developer</p>
+                        </div>
+
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <FaRegCalendarAlt className="text-blue-500" /> Experience
+                            </p>
+                            <p>3 Years</p>
+                        </div>
+
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <PiGraduationCapBold className="text-blue-500" /> Qualification
+                            </p>
+                            <p>Bachelor Degree</p>
+                        </div>
+
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <IoMaleFemale className="text-blue-500" /> Gender
+                            </p>
+                            <p>Both</p>
+                        </div>
+
+                        <div>
+                            <p className="font-semibold flex items-center gap-2">
+                                <FaDollarSign className="text-blue-500" /> Offered Salary
+                            </p>
+                            <p>$2000 – $2500 / Month</p>
+                        </div>
+                    </div>
+
+                    {/* Job Skills */}
+                    <div className="bg-white rounded-xl mt-7">
+                        <h2 className="font-bold text-lg mb-5">Job Skills</h2>
+                        <div className="flex flex-wrap gap-2">
+                        {["Html","Python","WordPress","JavaScript","Figma","Angular","React js","Drupal","Joomla"].map((skill, i) => (
+                            <span 
+                            key={i} 
+                            className="bg-[#F0F6FE] text-[#1967D2] px-5 py-2 rounded-[15px] text-sm font-medium hover:bg-[#1967D2] hover:text-[#F0F6FE] cursor-pointer"
+                            >
+                            {skill}
+                            </span>
+                        ))}
+                        </div>
+                    </div>
+
+                    {/* Company Profile */}
+                    <div className="relative mt-15 bg-white rounded-xl p-6 border border-gray-200 hover:border-[#2e55fa] shadow-[0_0px_15px_rgba(56,152,226,0.4)]  transition duration-300 cursor-pointer">
+                        {/* Company Logo */}
+                        <div className="absolute -top-10 left-7 flex justify-center mb-4 border-gray-200 hover:border-[#2e55fa] shadow-[0_0px_15px_rgba(56,152,226,0.4)]  transition duration-300 rounded-[15px]">
+                        <img src="./images/company1.jpg" alt="company-logo" className="w-20  object-cover rounded-[15px]"/>
+                        </div>
+                        <h2 className="text-center font-bold text-lg mt-10">Senior Web Designer , Developer</h2>
+                       
+
+                        {/* Info List */}
+                        <div className="space-y-3 text-sm text-gray-700 mt-3">
+                        <p><strong>Company:</strong>Software Development</p>
+                        <p><strong>Phone:</strong> +291 560 56456</p>
+                        <p><strong>Email:</strong> thewebmaxdemo@gmail.com</p>
+                        <p><strong>Website:</strong> <a href="https://themeforest.net" className="text-blue-500 hover:underline">themeforest.net</a></p>
+                        <p><strong>Address:</strong> 1363-1385 Sunset Blvd, Angeles, CA 90026, USA</p>
+                        </div>
+
+                        {/* Button */}
+                        <div className="flex justify-center mt-5">
+                        <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+                            View Profile
+                        </button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
 
 
 

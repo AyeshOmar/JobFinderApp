@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from '../../Components/header/Header'
 import { FaSuitcase, FaAddressCard, FaMapMarkerAlt, FaDollarSign } from "react-icons/fa";
 import CardJob from '../../Components/JobOffer/CardJob';
 import MapLeaflet from "./MapLeaflet";
