@@ -68,12 +68,12 @@ const CardJob = ({ Data ,sign}) => {
                 </span>{" "}
                 / {item.unit}
               </p>
-              <a
-                href="Job-Details"
+              <Link
+                to="/Job-Details"
                 className="text-blue-500 font-semibold hover:underline"
               >
                 Browse Job
-              </a>
+              </Link>
             </div>
           </div>
         ))}

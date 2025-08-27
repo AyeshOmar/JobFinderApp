@@ -16,7 +16,7 @@ function App() {
       <Routes>
             <Route  path="/" element={<Home />} />
             <Route  path="/all-jobs" element={<AllJobGrid />} />  
-            <Route  path="Job-Details"  element={<JobDetails/>}/>    
+            <Route  path="/Job-Details"  element={<JobDetails/>}/>    
       </Routes>
       <Footer/>
       </div>
