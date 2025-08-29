@@ -38,7 +38,7 @@ const Header = () => {
 
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-56 bg-white shadow-lg border rounded-md z-10">
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Se Connecter</a>
+              <Link to="/login" className="block px-4 py-2 hover:bg-gray-100">Se Connecter</Link>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100">Votre compte</a>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100">Suivre candidature</a>
             </div>

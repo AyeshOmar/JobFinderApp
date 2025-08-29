@@ -11,10 +11,10 @@ const JobDetail = () => {
 
 
 const SocialMedia=[
-    {name:"Facebbok",  className:'bg-[#4d69B2] text-white rounded-[10px] px-5 py-1'},
-    {name:"Twitter",  className:'bg-[#38B2E1] text-white rounded-[10px] px-5 py-1'},
-    {name:"Linkedin",  className:'bg-[#38B2E1] text-white rounded-[10px] px-5 py-1'},
-    {name:"Whatsapp",  className:'bg-[#2CA53B] text-white rounded-[10px] px-5 py-1'},
+    {name:"Facebbok",  className:'bg-[#4d69B2] text-white rounded-[10px] px-5 py-1 cursor-pointer'},
+    {name:"Twitter",  className:'bg-[#38B2E1] text-white rounded-[10px] px-5 py-1 cursor-pointer'},
+    {name:"Linkedin",  className:'bg-[#38B2E1] text-white rounded-[10px] px-5 py-1 cursor-pointer'},
+    {name:"Whatsapp",  className:'bg-[#2CA53B] text-white rounded-[10px] px-5 py-1 cursor-pointer'},
    
 ]
 const photos = [
@@ -30,7 +30,7 @@ const photos = [
   ];
 
   return (
-    <div className='mt-22 grid grid-cols-1 md:grid-cols-[70%_30%] gap-4 mx-auto max-w-[1170px] p-8 '>
+    <div className='mt-22 grid grid-cols-1 md:grid-cols-[70%_30%] gap-4 mx-auto max-w-[1170px] p-7 '>
             
         
         {/*left section*/}
@@ -121,7 +121,7 @@ const photos = [
 
                 <div className='mt-5'>
                     <h1 className='font-bold text-[#17171D] text-[21px] '>Share Profile </h1>
-                     <div className='flex space-x-3 mt-5'>
+                     <div className='grid grid-cols-3 space-y-3 space-x-3 mt-5'>
                        {SocialMedia.map((x,indexedDB) => (
                         <button key={indexedDB} className={x.className}>
                          {x.name}
@@ -181,7 +181,7 @@ const photos = [
 
 
                 {/*Right section*/}
-                <div className="bg-white rounded-xl p-6">
+                <div className="bg-white rounded-xl">
                     <h2 className="font-bold text-lg mb-5">Job Information</h2>
 
                     {/* Stats Boxes */}
